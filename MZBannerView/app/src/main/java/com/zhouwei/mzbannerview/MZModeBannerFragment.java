@@ -69,6 +69,7 @@ public class MZModeBannerFragment extends Fragment{
         for(int i=0;i<BANNER.length;i++){
             bannerList.add(BANNER[i]);
         }
+        bannerList.clear();
         mMZBanner.setIndicatorVisible(false);
         mMZBanner.setPages(bannerList, new MZHolderCreator<BannerViewHolder>() {
             @Override
