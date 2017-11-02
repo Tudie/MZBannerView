@@ -42,8 +42,6 @@ public class NormalViewPagerFragment extends Fragment {
         mMZBannerView = (MZBannerView) view.findViewById(R.id.mz_view_pager);
         mNormalViewPager = (MZBannerView) view.findViewById(R.id.normal_viewPager);
 
-
-
         mMZBannerView.setPages(mockData(), new MZHolderCreator<ViewPagerHolder>() {
             @Override
             public ViewPagerHolder createViewHolder() {
