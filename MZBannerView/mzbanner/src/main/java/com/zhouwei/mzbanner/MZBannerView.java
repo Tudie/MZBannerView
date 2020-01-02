@@ -54,6 +54,7 @@ public class MZBannerView<T> extends RelativeLayout {
     private int mDelayedTime = 3000;// Banner 切换时间间隔
     private ViewPagerScroller mViewPagerScroller;//控制ViewPager滑动速度的Scroller
     private boolean mIsOpenMZEffect = true;// 开启魅族Banner效果
+    private boolean mIsCanLoops = true;// 默认是否轮播图片
     private boolean mIsCanLoop = true;// 是否轮播图片
     private LinearLayout mIndicatorContainer;//indicator容器
     private ArrayList<ImageView> mIndicators = new ArrayList<>();
@@ -150,6 +151,7 @@ public class MZBannerView<T> extends RelativeLayout {
         mIsOpenMZEffect = typedArray.getBoolean(R.styleable.MZBannerView_open_mz_mode, true);
         mIsMiddlePageCover = typedArray.getBoolean(R.styleable.MZBannerView_middle_page_cover, true);
         mIsCanLoop = typedArray.getBoolean(R.styleable.MZBannerView_canLoop, true);
+        mIsCanLoops = mIsCanLoop;
         mIndicatorAlign = typedArray.getInt(R.styleable.MZBannerView_indicatorAlign, 1);
         mIndicatorPaddingLeft = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPaddingLeft, 0);
         mIndicatorPaddingRight = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPaddingRight, 0);
@@ -255,7 +257,7 @@ public class MZBannerView<T> extends RelativeLayout {
             mIndicatorContainer.removeAllViews();
             mIndicators.clear();
         }
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( dotSizew,dotSizeh);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dotSizew, dotSizeh);
         params.setMargins(0, 0, margins, 0);
         for (int i = 0; i < mDatas.size(); i++) {
             ImageView imageView = new ImageView(getContext());
@@ -403,10 +405,12 @@ public class MZBannerView<T> extends RelativeLayout {
         mIndicatorRes[0] = getResources().getDrawable(unSelectRes);
         mIndicatorRes[1] = getResources().getDrawable(selectRes);
     }
+
     public void setIndicatorRes(Drawable unSelectRes, Drawable selectRes) {
         mIndicatorRes[0] = unSelectRes;
         mIndicatorRes[1] = selectRes;
     }
+
     public void setIndicatorRes(String unSelectRes, String selectRes) {
         mIndicatorRes[0] = new ColorDrawable(Color.parseColor(unSelectRes));
         mIndicatorRes[1] = new ColorDrawable(Color.parseColor(selectRes));
@@ -427,6 +431,8 @@ public class MZBannerView<T> extends RelativeLayout {
         mDatas = datas;
         if (datas.size() < 2) {
             mIsCanLoop = false;
+        } else {
+            mIsCanLoop = mIsCanLoops;
         }
         //如果在播放，就先让播放停止
         pause();
@@ -445,7 +451,7 @@ public class MZBannerView<T> extends RelativeLayout {
         setOpenMZEffect();
         // 2017.7.20 fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
         //初始化Indicator
-        if (datas.size() >1) {
+        if (datas.size() > 1) {
             initIndicator();
         }
         mAdapter = new MZPagerAdapter(datas, mzHolderCreator, mIsCanLoop);
@@ -469,7 +475,7 @@ public class MZBannerView<T> extends RelativeLayout {
             public void onPageSelected(int position) {
                 mCurrentItem = position;
 
-                if (datas.size() >1) {
+                if (datas.size() > 1) {
                     // 切换indicator
                     int realSelectPosition = mCurrentItem % mIndicators.size();
                     for (int i = 0; i < mDatas.size(); i++) {
@@ -512,7 +518,7 @@ public class MZBannerView<T> extends RelativeLayout {
             return;
         }
         mDatas = datas;
-        if (datas.size() >1) {
+        if (datas.size() > 1) {
             this.mIsCanLoop = mIsCanLoop;
         }
         //如果在播放，就先让播放停止
