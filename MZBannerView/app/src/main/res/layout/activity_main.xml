@@ -39,6 +39,6 @@
         android:layout_marginTop="10dp"
         app:canLoop="true"
         app:indicatorAlign="left"
-        app:open_mz_mode="true" />
+        app:open_mz_mode="false" />
 
 </LinearLayout>

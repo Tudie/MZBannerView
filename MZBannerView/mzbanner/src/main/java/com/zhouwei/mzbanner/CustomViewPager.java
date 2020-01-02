@@ -1,13 +1,15 @@
 package com.zhouwei.mzbanner;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.View;
 
+import androidx.viewpager.widget.ViewPager;
+
 import java.util.ArrayList;
 import java.util.Collections;
+
 
 /**
  * Created by zhouwei on 17/8/16.

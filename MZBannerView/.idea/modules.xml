@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MZBannerView.iml" filepath="$PROJECT_DIR$/MZBannerView.iml" />
-      <module fileurl="file://E:\Desktop\Project\MZBannerView\MZBannerView\MZBannerView.iml" filepath="E:\Desktop\Project\MZBannerView\MZBannerView\MZBannerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\Desktop\Project\MZBannerView\MZBannerView\app\app.iml" filepath="E:\Desktop\Project\MZBannerView\MZBannerView\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mzbanner/mzbanner.iml" filepath="$PROJECT_DIR$/mzbanner/mzbanner.iml" />
-      <module fileurl="file://E:\Desktop\Project\MZBannerView\MZBannerView\mzbanner\mzbanner.iml" filepath="E:\Desktop\Project\MZBannerView\MZBannerView\mzbanner\mzbanner.iml" />
     </modules>
   </component>
 </project>
