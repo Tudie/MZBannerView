@@ -293,6 +293,14 @@ public class MZBannerView<T> extends RelativeLayout {
         }
     }
 
+    public boolean ismIsCanLoop() {
+        return mIsCanLoop;
+    }
+
+    public void setmIsCanLoop(boolean mIsCanLoop) {
+        this.mIsCanLoop = mIsCanLoop;
+    }
+
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (!mIsCanLoop) {
