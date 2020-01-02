@@ -430,7 +430,7 @@ public class MZBannerView<T> extends RelativeLayout {
         if (datas.size() < 2) {
             mIsCanLoop = false;
         }else {
-            mIsCanLoop= mIsCanLoops;
+            mIsCanLoop= true;
         }
         //如果在播放，就先让播放停止
         pause();
@@ -511,7 +511,7 @@ public class MZBannerView<T> extends RelativeLayout {
 
     }
 
-    private void setPages(final List<T> datas, MZHolderCreator mzHolderCreator, boolean mIsCanLoop) {
+    public void setPages(final List<T> datas, MZHolderCreator mzHolderCreator, boolean mIsCanLoop) {
         if (datas == null || mzHolderCreator == null) {
             return;
         }
