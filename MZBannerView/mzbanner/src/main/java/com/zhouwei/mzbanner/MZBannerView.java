@@ -174,7 +174,7 @@ public class MZBannerView<T> extends RelativeLayout {
         mViewPager.setOffscreenPageLimit(4);
         if (mIndicatorbot > 0) {
             RelativeLayout.LayoutParams layoutParams = (LayoutParams) banner_indicator_rl.getLayoutParams();
-            layoutParams.bottomMargin = dpToPx(mIndicatorbot);
+            layoutParams.bottomMargin = mIndicatorbot;
             banner_indicator_rl.setLayoutParams(layoutParams);
         }
 
