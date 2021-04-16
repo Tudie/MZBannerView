@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MZBannerView.iml" filepath="$PROJECT_DIR$/MZBannerView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mzbanner/mzbanner.iml" filepath="$PROJECT_DIR$/mzbanner/mzbanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MZBannerView.iml" filepath="$PROJECT_DIR$/.idea/MZBannerView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MZBannerView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MZBannerView.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mzbanner/MZBannerView.mzbanner.iml" filepath="$PROJECT_DIR$/.idea/modules/mzbanner/MZBannerView.mzbanner.iml" />
     </modules>
   </component>
 </project>
