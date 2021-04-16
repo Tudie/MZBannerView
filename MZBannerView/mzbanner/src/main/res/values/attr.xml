@@ -5,6 +5,7 @@
         <attr name="canLoop" format="boolean"/>
         <attr name="indicatorPaddingLeft" format="dimension"/>
         <attr name="indicatorPaddingRight" format="dimension"/>
+        <attr name="indicatorbot" format="dimension"/>
         <attr name="indicatorAlign">
             <enum name="left" value="0"/>
             <enum name="center" value="1"/>
