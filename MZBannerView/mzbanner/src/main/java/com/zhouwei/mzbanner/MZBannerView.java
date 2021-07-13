@@ -505,7 +505,10 @@ public class MZBannerView<T> extends RelativeLayout {
                     }
                     // 不能直接将mOnPageChangeListener 设置给ViewPager ,否则拿到的position 是原始的positon
                     if (mOnPageChangeListener != null) {
-                        mOnPageChangeListener.onPageSelected(realSelectPosition);
+                        if (datas.size() > realSelectPosition) {
+                            mOnPageChangeListener.onPageSelected(realSelectPosition);
+                        }
+
                     }
                 }
 
@@ -591,7 +594,9 @@ public class MZBannerView<T> extends RelativeLayout {
                     }
                     // 不能直接将mOnPageChangeListener 设置给ViewPager ,否则拿到的position 是原始的positon
                     if (mOnPageChangeListener != null) {
-                        mOnPageChangeListener.onPageSelected(realSelectPosition);
+                        if (datas.size() > realSelectPosition) {
+                            mOnPageChangeListener.onPageSelected(realSelectPosition);
+                        }
                     }
                 }
             }
