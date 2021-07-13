@@ -73,10 +73,12 @@ public class MZBannerView<T> extends RelativeLayout {
     private ViewPager.OnPageChangeListener mOnPageChangeListener;
     private BannerPageClickListener mBannerPageClickListener;
 
-    public enum IndicatorAlign {
+    public enum IndicatorAlign
+
+    {
         LEFT,//做对齐
-        CENTER,//居中对齐
-        RIGHT //右对齐
+                CENTER,//居中对齐
+                RIGHT //右对齐
     }
 
     /**
@@ -483,7 +485,9 @@ public class MZBannerView<T> extends RelativeLayout {
                 if (mIndicators.size() > 0) {
                     int realPosition = position % mIndicators.size();
                     if (mOnPageChangeListener != null) {
-                        mOnPageChangeListener.onPageScrolled(realPosition, positionOffset, positionOffsetPixels);
+                        if (datas.size() > realPosition) {
+                            mOnPageChangeListener.onPageScrolled(realPosition, positionOffset, positionOffsetPixels);
+                        }
                     }
                 }
 
@@ -573,14 +577,15 @@ public class MZBannerView<T> extends RelativeLayout {
 
                 int realPosition = position % mIndicators.size();
                 if (mOnPageChangeListener != null) {
-                    mOnPageChangeListener.onPageScrolled(realPosition, positionOffset, positionOffsetPixels);
+                    if (datas.size() > realPosition) {
+                        mOnPageChangeListener.onPageScrolled(realPosition, positionOffset, positionOffsetPixels);
+                    }
                 }
             }
 
             @Override
             public void onPageSelected(int position) {
                 mCurrentItem = position;
-
 
                 if (datas.size() > 1) {
                     // 切换indicator
@@ -703,7 +708,13 @@ public class MZBannerView<T> extends RelativeLayout {
             mViewPager.getAdapter().notifyDataSetChanged();
             int currentItem = canLoop ? getStartSelectItem() : 0;
             //设置当前选中的Item
-            mViewPager.setCurrentItem(currentItem);
+               
+            try {
+                mViewPager.setCurrentItem(currentItem);
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            }
+
         }
 
         private int getStartSelectItem() {
