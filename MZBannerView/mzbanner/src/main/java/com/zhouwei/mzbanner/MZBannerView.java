@@ -423,44 +423,16 @@ public class MZBannerView<T> extends RelativeLayout {
     public void setIndicatorRes(@DrawableRes int unSelectRes, @DrawableRes int selectRes) {
         mIndicatorRes[0] = getResources().getDrawable(unSelectRes);
         mIndicatorRes[1] = getResources().getDrawable(selectRes);
-        for (int i = 0; i < mIndicators.size(); i++) {
-            if (mIndicators.size() > mCurrentItem) {
-                if (i == mCurrentItem) {
-                    mIndicators.get(i).setBackground(mIndicatorRes[1]);
-                } else {
-                    mIndicators.get(i).setBackground(mIndicatorRes[0]);
-                }
-            }
-        }
     }
 
     public void setIndicatorRes(Drawable unSelectRes, Drawable selectRes) {
         mIndicatorRes[0] = unSelectRes;
         mIndicatorRes[1] = selectRes;
-        for (int i = 0; i < mIndicators.size(); i++) {
-            if (mIndicators.size() > mCurrentItem) {
-                if (i == mCurrentItem) {
-                    mIndicators.get(i).setBackground(mIndicatorRes[1]);
-                } else {
-                    mIndicators.get(i).setBackground(mIndicatorRes[0]);
-                }
-            }
-        }
     }
 
     public void setIndicatorRes(String unSelectRes, String selectRes) {
         mIndicatorRes[0] = new ColorDrawable(Color.parseColor(unSelectRes));
         mIndicatorRes[1] = new ColorDrawable(Color.parseColor(selectRes));
-//        mIndicatorRes[1] = new ColorDrawable(Color.parseColor(selectRes));
-        for (int i = 0; i < mIndicators.size(); i++) {
-            if (mIndicators.size() > mCurrentItem) {
-                if (i == mCurrentItem) {
-                    mIndicators.get(i).setBackground(mIndicatorRes[1]);
-                } else {
-                    mIndicators.get(i).setBackground(mIndicatorRes[0]);
-                }
-            }
-        }
     }
 
     /**

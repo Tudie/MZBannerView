@@ -82,15 +82,14 @@ public class MZModeBannerFragment extends Fragment {
         });
 
         mNormalBanner = (MZBannerView) view.findViewById(R.id.banner_normal);
-        mNormalBanner.setIndicatorRes("#00ff00","#0000ff");
-//        mNormalBanner.setIndicatorRes(R.color.colorAccent,R.color.colorPrimary);
+//        mNormalBanner.setIndicatorRes("#00ff00","#0000ff");
         mNormalBanner.setPages(list, new MZHolderCreator<BannerViewHolder>() {
             @Override
             public BannerViewHolder createViewHolder() {
                 return new BannerViewHolder();
             }
         });
-
+        mNormalBanner.pause();
 
     }
 
@@ -118,17 +117,17 @@ public class MZModeBannerFragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        mMZBanner.pause();
-        mNormalBanner.pause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        mMZBanner.start();
-        mNormalBanner.start();
-    }
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        mMZBanner.pause();
+//        mNormalBanner.pause();
+//    }
+//
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        mMZBanner.start();
+//        mNormalBanner.start();
+//    }
 }
