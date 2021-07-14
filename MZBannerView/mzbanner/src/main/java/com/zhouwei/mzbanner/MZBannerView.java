@@ -448,38 +448,39 @@ public class MZBannerView<T> extends RelativeLayout {
         if (datas == null || mzHolderCreator == null) {
             return;
         }
-        mDatas = datas;
-        if (datas.size() < 2) {
-            mIsCanLoop = false;
-        } else {
-            mIsCanLoop = true;
-        }
-        //如果在播放，就先让播放停止
-        pause();
-
-        //增加一个逻辑：由于魅族模式会在一个页面展示前后页面的部分，因此，数据集合的长度至少为3,否则，自动为普通Banner模式
-        //不管配置的:open_mz_mode 属性的值是否为true
-
-        if (datas.size() < 3) {
-            mIsOpenMZEffect = false;
-            MarginLayoutParams layoutParams = (MarginLayoutParams) mViewPager.getLayoutParams();
-            layoutParams.setMargins(0, 0, 0, 0);
-            mViewPager.setLayoutParams(layoutParams);
-            setClipChildren(true);
-            mViewPager.setClipChildren(true);
-        }
-        setOpenMZEffect();
-        // 2017.7.20 fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
-        //初始化Indicator
-        if (datas.size() > 1) {
-            initIndicator();
-        }
-        mAdapter = new MZPagerAdapter(datas, mzHolderCreator, mIsCanLoop);
-        mAdapter.setUpViewViewPager(mViewPager);
-        mAdapter.setPageClickListener(mBannerPageClickListener);
-
 
         try {
+            mDatas = datas;
+            if (datas.size() < 2) {
+                mIsCanLoop = false;
+            } else {
+                mIsCanLoop = true;
+            }
+            //如果在播放，就先让播放停止
+            pause();
+
+            //增加一个逻辑：由于魅族模式会在一个页面展示前后页面的部分，因此，数据集合的长度至少为3,否则，自动为普通Banner模式
+            //不管配置的:open_mz_mode 属性的值是否为true
+
+            if (datas.size() < 3) {
+                mIsOpenMZEffect = false;
+                MarginLayoutParams layoutParams = (MarginLayoutParams) mViewPager.getLayoutParams();
+                layoutParams.setMargins(0, 0, 0, 0);
+                mViewPager.setLayoutParams(layoutParams);
+                setClipChildren(true);
+                mViewPager.setClipChildren(true);
+            }
+            setOpenMZEffect();
+            // 2017.7.20 fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
+            //初始化Indicator
+            if (datas.size() > 1) {
+                initIndicator();
+            }
+            mAdapter = new MZPagerAdapter(datas, mzHolderCreator, mIsCanLoop);
+            mAdapter.setUpViewViewPager(mViewPager);
+            mAdapter.setPageClickListener(mBannerPageClickListener);
+
+
             mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
                 public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -546,35 +547,34 @@ public class MZBannerView<T> extends RelativeLayout {
         if (datas == null || mzHolderCreator == null) {
             return;
         }
-        mDatas = datas;
-        if (datas.size() > 1) {
-            this.mIsCanLoop = mIsCanLoop;
-        }
-        //如果在播放，就先让播放停止
-        pause();
-
-        //增加一个逻辑：由于魅族模式会在一个页面展示前后页面的部分，因此，数据集合的长度至少为3,否则，自动为普通Banner模式
-        //不管配置的:open_mz_mode 属性的值是否为true
-
-        if (datas.size() < 3) {
-            mIsOpenMZEffect = false;
-            MarginLayoutParams layoutParams = (MarginLayoutParams) mViewPager.getLayoutParams();
-            layoutParams.setMargins(0, 0, 0, 0);
-            mViewPager.setLayoutParams(layoutParams);
-            setClipChildren(true);
-            mViewPager.setClipChildren(true);
-        }
-        setOpenMZEffect();
-        // 2017.7.20 fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
-        //初始化Indicator
-        if (datas.size() > 1) {
-            initIndicator();
-        }
-        mAdapter = new MZPagerAdapter(datas, mzHolderCreator, mIsCanLoop);
-        mAdapter.setUpViewViewPager(mViewPager);
-        mAdapter.setPageClickListener(mBannerPageClickListener);
-
         try {
+            mDatas = datas;
+            if (datas.size() > 1) {
+                this.mIsCanLoop = mIsCanLoop;
+            }
+            //如果在播放，就先让播放停止
+            pause();
+
+            //增加一个逻辑：由于魅族模式会在一个页面展示前后页面的部分，因此，数据集合的长度至少为3,否则，自动为普通Banner模式
+            //不管配置的:open_mz_mode 属性的值是否为true
+
+            if (datas.size() < 3) {
+                mIsOpenMZEffect = false;
+                MarginLayoutParams layoutParams = (MarginLayoutParams) mViewPager.getLayoutParams();
+                layoutParams.setMargins(0, 0, 0, 0);
+                mViewPager.setLayoutParams(layoutParams);
+                setClipChildren(true);
+                mViewPager.setClipChildren(true);
+            }
+            setOpenMZEffect();
+            // 2017.7.20 fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
+            //初始化Indicator
+            if (datas.size() > 1) {
+                initIndicator();
+            }
+            mAdapter = new MZPagerAdapter(datas, mzHolderCreator, mIsCanLoop);
+            mAdapter.setUpViewViewPager(mViewPager);
+            mAdapter.setPageClickListener(mBannerPageClickListener);
 
 
             mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
