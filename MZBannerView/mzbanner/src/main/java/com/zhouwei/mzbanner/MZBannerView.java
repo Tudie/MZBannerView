@@ -173,7 +173,7 @@ public class MZBannerView<T> extends RelativeLayout {
         banner_indicator_rl = (RelativeLayout) view.findViewById(R.id.banner_indicator_rl);
         mIndicatorContainer = (LinearLayout) view.findViewById(R.id.banner_indicator_container);
         mViewPager = (CustomViewPager) view.findViewById(R.id.mzbanner_vp);
-        mViewPager.setOffscreenPageLimit(4);
+        mViewPager.setOffscreenPageLimit(0);
         if (mIndicatorbot > 0) {
             RelativeLayout.LayoutParams layoutParams = (LayoutParams) banner_indicator_rl.getLayoutParams();
             layoutParams.bottomMargin = mIndicatorbot;
@@ -228,11 +228,7 @@ public class MZBannerView<T> extends RelativeLayout {
                     mViewPager.getContext());
             mScroller.set(mViewPager, mViewPagerScroller);
 
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        }  catch(IllegalStateException e){
             e.printStackTrace();
         }
     }
@@ -242,18 +238,25 @@ public class MZBannerView<T> extends RelativeLayout {
         @Override
         public void run() {
             if (mIsAutoPlay) {
-                mCurrentItem = mViewPager.getCurrentItem();
-                mCurrentItem++;
-                if (mCurrentItem == mAdapter.getCount() - 1) {
-                    mCurrentItem = 0;
-                    mViewPager.setCurrentItem(mCurrentItem, false);
-                    mHandler.postDelayed(this, mDelayedTime);
-                } else {
-                    mViewPager.setCurrentItem(mCurrentItem);
+                try {
+                    mCurrentItem = mViewPager.getCurrentItem();
+                    mCurrentItem++;
+                    if (mCurrentItem > mAdapter.getCount() - 1) {
+                        mCurrentItem == mAdapter.getCount() - 1
+                    }
+                    if (mCurrentItem == mAdapter.getCount() - 1) {
+                        mCurrentItem = 0;
+                        mViewPager.setCurrentItem(mCurrentItem, false);
+                        mHandler.postDelayed(this, mDelayedTime);
+                    } else {
+                        mViewPager.setCurrentItem(mCurrentItem);
+                        mHandler.postDelayed(this, mDelayedTime);
+                    }
+                } else{
                     mHandler.postDelayed(this, mDelayedTime);
                 }
-            } else {
-                mHandler.postDelayed(this, mDelayedTime);
+            } catch(IllegalStateException e){
+                e.printStackTrace();
             }
         }
     };
@@ -786,7 +789,10 @@ public class MZBannerView<T> extends RelativeLayout {
 
         private void setCurrentItem(int position) {
             try {
-                mViewPager.setCurrentItem(position, false);
+                if (getRealCount() > position) {
+                    mViewPager.setCurrentItem(position, false);
+                }
+
             } catch (IllegalStateException e) {
                 e.printStackTrace();
             }
@@ -819,7 +825,7 @@ public class MZBannerView<T> extends RelativeLayout {
             // create View
             View view = holder.createView(container.getContext());
 
-            if (mDatas != null && mDatas.size() > 0) {
+            if (mDatas != null && mDatas.size() > realPosition) {
                 holder.onBind(container.getContext(), realPosition, mDatas.get(realPosition));
             }
 
@@ -827,7 +833,7 @@ public class MZBannerView<T> extends RelativeLayout {
             view.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (mPageClickListener != null) {
+                    if (mPageClickListener != null && mDatas.size() > realPosition) {
                         mPageClickListener.onPageClick(v, realPosition);
                     }
                 }
