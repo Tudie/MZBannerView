@@ -479,61 +479,67 @@ public class MZBannerView<T> extends RelativeLayout {
         mAdapter.setPageClickListener(mBannerPageClickListener);
 
 
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (mIndicators.size() > 0) {
-                    int realPosition = position % mIndicators.size();
+        try {
+            mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                    if (mIndicators.size() > 0) {
+                        int realPosition = position % mIndicators.size();
+                        if (mOnPageChangeListener != null) {
+                            if (datas.size() > realPosition) {
+                                mOnPageChangeListener.onPageScrolled(realPosition, positionOffset, positionOffsetPixels);
+                            }
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onPageSelected(int position) {
+                    mCurrentItem = position;
+
+                    if (datas.size() > 1) {
+                        // 切换indicator
+                        int realSelectPosition = mCurrentItem % mIndicators.size();
+                        for (int i = 0; i < mDatas.size(); i++) {
+                            if (i == realSelectPosition) {
+                                mIndicators.get(i).setBackground(mIndicatorRes[1]);
+                            } else {
+                                mIndicators.get(i).setBackground(mIndicatorRes[0]);
+                            }
+                        }
+                        // 不能直接将mOnPageChangeListener 设置给ViewPager ,否则拿到的position 是原始的positon
+                        if (mOnPageChangeListener != null) {
+                            if (datas.size() > realSelectPosition) {
+                                mOnPageChangeListener.onPageSelected(realSelectPosition);
+                            }
+
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onPageScrollStateChanged(int state) {
+                    switch (state) {
+                        case ViewPager.SCROLL_STATE_DRAGGING:
+                            mIsAutoPlay = false;
+                            break;
+                        case ViewPager.SCROLL_STATE_SETTLING:
+                            mIsAutoPlay = true;
+                            break;
+
+                    }
                     if (mOnPageChangeListener != null) {
-                        if (datas.size() > realPosition) {
-                            mOnPageChangeListener.onPageScrolled(realPosition, positionOffset, positionOffsetPixels);
-                        }
+                        mOnPageChangeListener.onPageScrollStateChanged(state);
                     }
                 }
+            });
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+        }
 
-            }
 
-            @Override
-            public void onPageSelected(int position) {
-                mCurrentItem = position;
-
-                if (datas.size() > 1) {
-                    // 切换indicator
-                    int realSelectPosition = mCurrentItem % mIndicators.size();
-                    for (int i = 0; i < mDatas.size(); i++) {
-                        if (i == realSelectPosition) {
-                            mIndicators.get(i).setBackground(mIndicatorRes[1]);
-                        } else {
-                            mIndicators.get(i).setBackground(mIndicatorRes[0]);
-                        }
-                    }
-                    // 不能直接将mOnPageChangeListener 设置给ViewPager ,否则拿到的position 是原始的positon
-                    if (mOnPageChangeListener != null) {
-                        if (datas.size() > realSelectPosition) {
-                            mOnPageChangeListener.onPageSelected(realSelectPosition);
-                        }
-
-                    }
-                }
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                switch (state) {
-                    case ViewPager.SCROLL_STATE_DRAGGING:
-                        mIsAutoPlay = false;
-                        break;
-                    case ViewPager.SCROLL_STATE_SETTLING:
-                        mIsAutoPlay = true;
-                        break;
-
-                }
-                if (mOnPageChangeListener != null) {
-                    mOnPageChangeListener.onPageScrollStateChanged(state);
-                }
-            }
-        });
 
 
     }
@@ -708,7 +714,7 @@ public class MZBannerView<T> extends RelativeLayout {
             mViewPager.getAdapter().notifyDataSetChanged();
             int currentItem = canLoop ? getStartSelectItem() : 0;
             //设置当前选中的Item
-               
+
             try {
                 mViewPager.setCurrentItem(currentItem);
             } catch (IllegalStateException e) {
