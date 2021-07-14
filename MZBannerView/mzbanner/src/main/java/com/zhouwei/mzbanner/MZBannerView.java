@@ -73,12 +73,10 @@ public class MZBannerView<T> extends RelativeLayout {
     private ViewPager.OnPageChangeListener mOnPageChangeListener;
     private BannerPageClickListener mBannerPageClickListener;
 
-    public enum IndicatorAlign
-
-    {
+    public enum IndicatorAlign {
         LEFT,//做对齐
-                CENTER,//居中对齐
-                RIGHT //右对齐
+        CENTER,//居中对齐
+        RIGHT //右对齐
     }
 
     /**
@@ -228,8 +226,7 @@ public class MZBannerView<T> extends RelativeLayout {
                     mViewPager.getContext());
             mScroller.set(mViewPager, mViewPagerScroller);
 
-        }  catch(IllegalStateException e){
-            e.printStackTrace();
+        } catch (Exception e) {
         }
     }
 
@@ -237,12 +234,12 @@ public class MZBannerView<T> extends RelativeLayout {
     private final Runnable mLoopRunnable = new Runnable() {
         @Override
         public void run() {
-            if (mIsAutoPlay) {
-                try {
+            try {
+                if (mIsAutoPlay) {
                     mCurrentItem = mViewPager.getCurrentItem();
                     mCurrentItem++;
                     if (mCurrentItem > mAdapter.getCount() - 1) {
-                        mCurrentItem == mAdapter.getCount() - 1
+                        mCurrentItem = mAdapter.getCount() - 1;
                     }
                     if (mCurrentItem == mAdapter.getCount() - 1) {
                         mCurrentItem = 0;
@@ -252,11 +249,10 @@ public class MZBannerView<T> extends RelativeLayout {
                         mViewPager.setCurrentItem(mCurrentItem);
                         mHandler.postDelayed(this, mDelayedTime);
                     }
-                } else{
+                } else {
                     mHandler.postDelayed(this, mDelayedTime);
                 }
-            } catch(IllegalStateException e){
-                e.printStackTrace();
+            } catch (Exception e) {
             }
         }
     };
