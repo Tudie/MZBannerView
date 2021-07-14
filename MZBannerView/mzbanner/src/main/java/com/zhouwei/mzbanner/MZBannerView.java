@@ -502,10 +502,12 @@ public class MZBannerView<T> extends RelativeLayout {
                         // 切换indicator
                         int realSelectPosition = mCurrentItem % mIndicators.size();
                         for (int i = 0; i < mDatas.size(); i++) {
-                            if (i == realSelectPosition) {
-                                mIndicators.get(i).setBackground(mIndicatorRes[1]);
-                            } else {
-                                mIndicators.get(i).setBackground(mIndicatorRes[0]);
+                            if (mIndicators.size() > realSelectPosition) {
+                                if (i == realSelectPosition) {
+                                    mIndicators.get(i).setBackground(mIndicatorRes[1]);
+                                } else {
+                                    mIndicators.get(i).setBackground(mIndicatorRes[0]);
+                                }
                             }
                         }
                         // 不能直接将mOnPageChangeListener 设置给ViewPager ,否则拿到的position 是原始的positon
@@ -596,11 +598,14 @@ public class MZBannerView<T> extends RelativeLayout {
                         // 切换indicator
                         int realSelectPosition = mCurrentItem % mIndicators.size();
                         for (int i = 0; i < mDatas.size(); i++) {
-                            if (i == realSelectPosition) {
-                                mIndicators.get(i).setBackground(mIndicatorRes[1]);
-                            } else {
-                                mIndicators.get(i).setBackground(mIndicatorRes[0]);
+                            if (mIndicators.size()>i){
+                                if (i == realSelectPosition) {
+                                    mIndicators.get(i).setBackground(mIndicatorRes[1]);
+                                } else {
+                                    mIndicators.get(i).setBackground(mIndicatorRes[0]);
+                                }
                             }
+
                         }
                         // 不能直接将mOnPageChangeListener 设置给ViewPager ,否则拿到的position 是原始的positon
                         if (mOnPageChangeListener != null) {
