@@ -1,25 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b38ddf0-0603-4803-8a02-d39bffb3ed14" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/androidTest/java/com/zhouwei/mzbannerview/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/ic_launcher-web.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/DataEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/MZApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/MZModeBannerFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/MZModeNotCoverFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/NormalViewPagerFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/StatusBarUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/BaseResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/BasicParamsInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/Fault.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/HttpCommonInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/ObjectLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/PayLoad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/http/RetrofitServiceManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/remote/DataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/remote/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/remote/MovieLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/remote/MovieSubject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/java/com/zhouwei/mzbannerview/remote/RemoteTestFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/drawable/dot_select_image.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/drawable/dot_unselect_image.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/drawable/ic_format_list_bulleted_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/drawable/ic_more_vert_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/banner_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/banner_item_padding.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/home_activity.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/mz_mode_not_cover.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/normal_banner_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/normal_view_pager_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/remote_banner_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/layout/remote_test_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/menu/setting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/banner1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/banner2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/banner3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/banner4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/banner5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xhdpi/image8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/app/src/test/java/com/zhouwei/mzbannerview/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/androidTest/java/com/zhouwei/mzbanner/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/CustomViewPager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/holder/MZHolderCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/holder/MZViewHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/transformer/CoverModeTransformer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/transformer/ScaleYTransformer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/drawable/indicator_normal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/drawable/indicator_selected.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/layout/mz_banner_effect_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/layout/mz_banner_normal_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/values/attr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/values/ids.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/mzbanner/src/test/java/com/zhouwei/mzbanner/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MZBannerView/settings.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@EIY9HE9HVOWSSKIJ]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="893" />
-    <option name="y" value="156" />
-    <option name="width" value="1394" />
-    <option name="height" value="948" />
   </component>
   <component name="ProjectId" id="1vICK8dtBbYbGNDopnEZjBvVa6k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,6 +145,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android-custom-viewD:/Project/Tool/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java_SELECTED" value="MZBannerView" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -53,6 +170,71 @@
     </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="MZBannerView.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
