@@ -14,7 +14,8 @@ public class ScaleYTransformer implements ViewPager.PageTransformer {
     public void transformPage(View page, float position) {
 
         if(position < -1){
-            page.setScaleY(MIN_SCALE);
+            float scale = Math.max(MIN_SCALE,1 - Math.abs(position));
+            page.setScaleY(scale);;
         }else if(position<= 1){
             //
             float scale = Math.max(MIN_SCALE,1 - Math.abs(position));
@@ -28,7 +29,8 @@ public class ScaleYTransformer implements ViewPager.PageTransformer {
             }*/
 
         }else{
-            page.setScaleY(MIN_SCALE);
+            float scale = Math.max(MIN_SCALE,1 - Math.abs(position));
+            page.setScaleY(scale);
         }
     }
 
