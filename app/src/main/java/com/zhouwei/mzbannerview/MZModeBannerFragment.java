@@ -89,7 +89,7 @@ public class MZModeBannerFragment extends Fragment {
                 return new BannerViewHolder();
             }
         });
-        mNormalBanner.pause();
+        mNormalBanner.start();
 
     }
 

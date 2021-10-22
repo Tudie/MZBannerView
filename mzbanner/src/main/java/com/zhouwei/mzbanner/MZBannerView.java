@@ -38,6 +38,7 @@ import com.zhouwei.mzbanner.transformer.ScaleYTransformer;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -52,7 +53,7 @@ public class MZBannerView<T> extends RelativeLayout {
     private boolean mIsAutoPlay = true;// 是否自动播放
     private int mCurrentItem = 0;//当前位置
     private Handler mHandler = new Handler();
-    private int mDelayedTime = 5000;// Banner 切换时间间隔
+    private int mDelayedTime = 3000;// Banner 切换时间间隔
     private ViewPagerScroller mViewPagerScroller;//控制ViewPager滑动速度的Scroller
     private boolean mIsOpenMZEffect = true;// 开启魅族Banner效果
     private boolean iszoom = true;//
@@ -164,6 +165,7 @@ public class MZBannerView<T> extends RelativeLayout {
         mIsOpenMZEffect = typedArray.getBoolean(R.styleable.MZBannerView_open_mz_mode, true);
         mIsMiddlePageCover = typedArray.getBoolean(R.styleable.MZBannerView_middle_page_cover, true);
         mIsCanLoop = typedArray.getBoolean(R.styleable.MZBannerView_canLoop, true);
+        resettimetime = typedArray.getBoolean(R.styleable.MZBannerView_resettime, false);
         mIsCanLoops = mIsCanLoop;
         mIndicatorAlign = typedArray.getInt(R.styleable.MZBannerView_indicatorAlign, 1);
         mIndicatorPaddingLeft = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPaddingLeft, 0);
@@ -241,12 +243,21 @@ public class MZBannerView<T> extends RelativeLayout {
         }
     }
 
+    public long NowTimeStamp() {
+        Date curDates = new Date(System.currentTimeMillis());// 获取当前时间戳
+        return curDates.getTime();
+    }
 
     private final Runnable mLoopRunnable = new Runnable() {
         @Override
         public void run() {
             try {
                 if (mIsAutoPlay) {
+                    if (isdown) {
+                        isdown = false;
+                        mHandler.postDelayed(this, mDelayedTime);
+                        return;
+                    }
                     mCurrentItem = mViewPager.getCurrentItem();
                     mCurrentItem++;
                     if (mCurrentItem > mAdapter.getCount() - 1) {
@@ -334,6 +345,9 @@ public class MZBannerView<T> extends RelativeLayout {
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_OUTSIDE:
             case MotionEvent.ACTION_DOWN:
+                if (resettimetime){
+                    isdown = true;
+                }
                 int paddingLeft = mViewPager.getLeft();
                 float touchX = ev.getRawX();
                 // 如果是魅族模式，去除两边的区域
@@ -371,6 +385,17 @@ public class MZBannerView<T> extends RelativeLayout {
             mIsAutoPlay = true;
             mHandler.postDelayed(mLoopRunnable, mDelayedTime);
         }
+    }
+
+    boolean isdown = false;
+    boolean resettimetime = false;//重置时间
+
+    public void setResettimetime(boolean resettimetime) {
+        this.resettimetime = resettimetime;
+    }
+
+    public void run() {
+
     }
 
     /**
@@ -534,6 +559,7 @@ public class MZBannerView<T> extends RelativeLayout {
                             break;
                         case ViewPager.SCROLL_STATE_SETTLING:
                             mIsAutoPlay = true;
+                            run();
                             break;
 
                     }
@@ -630,6 +656,7 @@ public class MZBannerView<T> extends RelativeLayout {
                             break;
                         case ViewPager.SCROLL_STATE_SETTLING:
                             mIsAutoPlay = true;
+                            run();
                             break;
 
                     }
@@ -669,7 +696,7 @@ public class MZBannerView<T> extends RelativeLayout {
                 mViewPager.setClipChildren(true);
             }
             setOpenMZEffect();
-            // 2017.7.20 fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
+            //fix：将Indicator初始化放在Adapter的初始化之前，解决更新数据变化更新时crush.
             //初始化Indicator
             if (datas.size() > 1) {
                 initIndicator();
@@ -727,6 +754,7 @@ public class MZBannerView<T> extends RelativeLayout {
                             break;
                         case ViewPager.SCROLL_STATE_SETTLING:
                             mIsAutoPlay = true;
+                            run();
                             break;
 
                     }
@@ -735,7 +763,7 @@ public class MZBannerView<T> extends RelativeLayout {
                     }
                 }
             });
-        } catch (IllegalStateException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
