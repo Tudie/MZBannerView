@@ -388,7 +388,7 @@ public class MZBannerView<T> extends RelativeLayout {
     }
 
     boolean isdown = false;
-    boolean resettimetime = false;//重置时间
+    boolean resettimetime = true;//重置时间
 
     public void setResettimetime(boolean resettimetime) {
         this.resettimetime = resettimetime;
