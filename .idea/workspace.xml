@@ -10,74 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b38ddf0-0603-4803-8a02-d39bffb3ed14" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MZBannerView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MZBannerView.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/zhouwei/mzbannerview/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/zhouwei/mzbannerview/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/DataEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/DataEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MZApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MZApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MZModeBannerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MZModeBannerFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MZModeNotCoverFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MZModeNotCoverFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/NormalViewPagerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/NormalViewPagerFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/StatusBarUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/StatusBarUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/BasicParamsInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/BasicParamsInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/Fault.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/Fault.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/HttpCommonInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/HttpCommonInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/ObjectLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/ObjectLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/PayLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/PayLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/RetrofitServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/http/RetrofitServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/MovieLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/MovieLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/MovieSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/MovieSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/RemoteTestFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/zhouwei/mzbannerview/remote/RemoteTestFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dot_select_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dot_select_image.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dot_unselect_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dot_unselect_image.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_format_list_bulleted_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_format_list_bulleted_black_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_more_vert_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_more_vert_black_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/setting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/zhouwei/mzbannerview/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/zhouwei/mzbannerview/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/androidTest/java/com/zhouwei/mzbanner/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/androidTest/java/com/zhouwei/mzbanner/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/CustomViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/CustomViewPager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/holder/MZHolderCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/holder/MZHolderCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/holder/MZViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/holder/MZViewHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/transformer/CoverModeTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/transformer/CoverModeTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/transformer/ScaleYTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/java/com/zhouwei/mzbanner/transformer/ScaleYTransformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/res/values/attr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/res/values/attr.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/res/values/ids.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/res/values/ids.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mzbanner/src/test/java/com/zhouwei/mzbanner/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mzbanner/src/test/java/com/zhouwei/mzbanner/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

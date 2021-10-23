@@ -165,7 +165,7 @@ public class MZBannerView<T> extends RelativeLayout {
         mIsOpenMZEffect = typedArray.getBoolean(R.styleable.MZBannerView_open_mz_mode, true);
         mIsMiddlePageCover = typedArray.getBoolean(R.styleable.MZBannerView_middle_page_cover, true);
         mIsCanLoop = typedArray.getBoolean(R.styleable.MZBannerView_canLoop, true);
-        resettimetime = typedArray.getBoolean(R.styleable.MZBannerView_resettime, false);
+        resettimetime = typedArray.getBoolean(R.styleable.MZBannerView_resettime, true);
         mIsCanLoops = mIsCanLoop;
         mIndicatorAlign = typedArray.getInt(R.styleable.MZBannerView_indicatorAlign, 1);
         mIndicatorPaddingLeft = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPaddingLeft, 0);
