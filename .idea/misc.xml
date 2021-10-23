@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Project/Tool/MZBannerView/app/src/main/res/layout/mz_mode_not_cover.xml" value="0.19927536231884058" />
+        <entry key="..\:/Project/Tool/MZBannerViews/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Project/Tool/MZBannerViews/mzbanner/src/main/res/drawable/indicator_normal.xml" value="0.18981481481481483" />
+        <entry key="..\:/Project/Tool/MZBannerViews/mzbanner/src/main/res/layout/mz_banner_effect_layout.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>

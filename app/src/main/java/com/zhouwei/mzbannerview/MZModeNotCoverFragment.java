@@ -26,8 +26,8 @@ import java.util.List;
 
 public class MZModeNotCoverFragment extends Fragment {
     public static final String TAG = "MZModeBannerFragment";
-    public static final int []RES = new int[]{R.mipmap.image5,R.mipmap.image2,R.mipmap.image1};
-    public static final int []BANNER = new int[]{R.mipmap.banner1,R.mipmap.banner2,R.mipmap.banner3};
+    public static final int []RES = new int[]{R.mipmap.image5,R.mipmap.image2,R.mipmap.image3,R.mipmap.image4,R.mipmap.image6,R.mipmap.image7,R.mipmap.image8};
+    public static final int []BANNER = new int[]{R.mipmap.banner1,R.mipmap.banner2,R.mipmap.banner3,R.mipmap.banner4,R.mipmap.banner5};
     private MZBannerView mMZBanner;
     private MZBannerView mNormalBanner;
 
@@ -79,13 +79,13 @@ public class MZModeNotCoverFragment extends Fragment {
         });
 
         mNormalBanner = (MZBannerView) view.findViewById(R.id.banner_normal);
-//        mNormalBanner.setIndicatorRes(R.color.colorAccent,R.color.colorPrimary);
-//        mNormalBanner.setPages(list, new MZHolderCreator<BannerPaddingViewHolder>() {
-//            @Override
-//            public BannerPaddingViewHolder createViewHolder() {
-//                return new BannerPaddingViewHolder();
-//            }
-//        });
+        mNormalBanner.setIndicatorRes(R.color.colorAccent,R.color.colorPrimary);
+        mNormalBanner.setPages(list, new MZHolderCreator<BannerPaddingViewHolder>() {
+            @Override
+            public BannerPaddingViewHolder createViewHolder() {
+                return new BannerPaddingViewHolder();
+            }
+        });
 
 
     }

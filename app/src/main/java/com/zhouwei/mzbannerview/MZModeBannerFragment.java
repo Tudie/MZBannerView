@@ -82,7 +82,7 @@ public class MZModeBannerFragment extends Fragment {
         });
 
         mNormalBanner = (MZBannerView) view.findViewById(R.id.banner_normal);
-        mNormalBanner.setIndicatorRes("#00ff00","#0000ff");
+//        mNormalBanner.setIndicatorRes("#00ff00","#0000ff");
         mNormalBanner.setPages(list, new MZHolderCreator<BannerViewHolder>() {
             @Override
             public BannerViewHolder createViewHolder() {
