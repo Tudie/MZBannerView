@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b38ddf0-0603-4803-8a02-d39bffb3ed14" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8b38ddf0-0603-4803-8a02-d39bffb3ed14" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewD:/Project/Tool/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java_MZBannerView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewD:/Project/Tool/MZBannerView/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java_SELECTED" value="MZBannerView" />
     <property name="android-custom-viewD:/Project/Tool/MZBannerViews/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java_MZBannerView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewD:/Project/Tool/MZBannerViews/mzbanner/src/main/java/com/zhouwei/mzbanner/MZBannerView.java_SELECTED" value="MZBannerView" />
