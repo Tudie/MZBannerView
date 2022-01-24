@@ -64,12 +64,11 @@ public class MZBannerView<T> extends RelativeLayout {
     private ArrayList<ImageView> mIndicators = new ArrayList<>();
     //mIndicatorRes[0] 为为选中，mIndicatorRes[1]为选中
     private Drawable[] mIndicatorRes = new Drawable[]{getResources().getDrawable(R.drawable.indicator_normal), getResources().getDrawable(R.drawable.indicator_selected)};
-    private int mIndicatorPaddingLeft = 0;
-    private int mIndicatorPaddingRight = 0;
+    private int indicatorPadding = 0;
     private int mIndicatorbot = 0;
     private int mMZModePadding = 0;//在仿魅族模式下，由于前后显示了上下一个页面的部分，因此需要计算这部分padding
     private int dotSizew = 7, dotSizeh = 7; // 指示器的大小（dp）
-    private int margins = 3; // 指示器间距（dp）
+    private int indicatormargins = 0; // 指示器间距（dp）
     private int xuanzhong = R.drawable.indicator_normal, unxuanzhong = R.drawable.indicator_selected;
     private Drawable xuanzhongd, unxuanzhongd;
     private int mIndicatorAlign = 1;
@@ -91,6 +90,11 @@ public class MZBannerView<T> extends RelativeLayout {
         RIGHT //右对齐
     }
 
+
+    public void setIndicatormargins(int indicatormargins) {
+        this.indicatormargins = dpToPx(indicatormargins);;
+    }
+
     /**
      * 中间Page是否覆盖两边，默认覆盖
      */
@@ -104,20 +108,17 @@ public class MZBannerView<T> extends RelativeLayout {
     public MZBannerView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         readAttrs(context, attrs);
-        init();
     }
 
     public MZBannerView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         readAttrs(context, attrs);
-        init();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public MZBannerView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         readAttrs(context, attrs);
-        init();
     }
 
     public int getDotSizew() {
@@ -134,14 +135,6 @@ public class MZBannerView<T> extends RelativeLayout {
 
     public void setDotSizeh(int dotSizeh) {
         this.dotSizeh = dpToPx(dotSizeh);
-    }
-
-    public int getMargins() {
-        return margins;
-    }
-
-    public void setMargins(int margins) {
-        this.margins = dpToPx(margins);
     }
 
     public Drawable getXuanzhongd() {
@@ -168,13 +161,15 @@ public class MZBannerView<T> extends RelativeLayout {
         resettimetime = typedArray.getBoolean(R.styleable.MZBannerView_resettime, true);
         mIsCanLoops = mIsCanLoop;
         mIndicatorAlign = typedArray.getInt(R.styleable.MZBannerView_indicatorAlign, 1);
-        mIndicatorPaddingLeft = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPaddingLeft, 0);
-        mIndicatorPaddingRight = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPaddingRight, 0);
+        indicatorPadding = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPadding, 0);
+        Log.i(">>>>>>>>>>>>banner"," indicatorPadding "+indicatorPadding);
         mIndicatorbot = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorbot, 0);
+        init();
     }
 
 
     private void init() {
+        Log.i(">>>>>>>>>>>>banner init"," indicatorPadding "+mIndicatorbot);
         View view = null;
         if (mIsOpenMZEffect) {
             view = LayoutInflater.from(getContext()).inflate(R.layout.mz_banner_effect_layout, this, true);
@@ -191,10 +186,9 @@ public class MZBannerView<T> extends RelativeLayout {
             banner_indicator_rl.setLayoutParams(layoutParams);
         }
 
-
         dotSizeh = dpToPx(dotSizeh);
         dotSizew = dpToPx(dotSizew);
-        margins = dpToPx(margins);
+        indicatormargins = dpToPx(5)+indicatorPadding;
         mMZModePadding = dpToPx(30);
         // 初始化Scroller
         initViewPagerScroll();
@@ -291,7 +285,7 @@ public class MZBannerView<T> extends RelativeLayout {
             mIndicators.clear();
         }
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dotSizew, dotSizeh);
-        params.setMargins(0, 0, margins, 0);
+        params.setMargins(0, 0, indicatormargins, 0);
         for (int i = 0; i < mDatas.size(); i++) {
             ImageView imageView = new ImageView(getContext());
             imageView.setLayoutParams(params);

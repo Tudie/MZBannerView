@@ -47,6 +47,7 @@ public class MZModeBannerFragment extends Fragment {
                 Toast.makeText(getContext(),"click page:"+position,Toast.LENGTH_LONG).show();
             }
         });
+        mMZBanner.setIndicatormargins(10);
         mMZBanner.addPageChangeLisnter(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -82,6 +83,7 @@ public class MZModeBannerFragment extends Fragment {
         });
 
         mNormalBanner = (MZBannerView) view.findViewById(R.id.banner_normal);
+//        mNormalBanner.setIndicatormargins(7);
 //        mNormalBanner.setIndicatorRes("#00ff00","#0000ff");
         mNormalBanner.setPages(list, new MZHolderCreator<BannerViewHolder>() {
             @Override

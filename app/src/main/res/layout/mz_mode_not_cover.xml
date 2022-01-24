@@ -25,7 +25,6 @@
        app:canLoop="true"
        app:middle_page_cover="false"
        app:indicatorAlign="center"
-       app:indicatorPaddingLeft="10dp"
        />
 
    <TextView
@@ -47,6 +46,7 @@
        app:middle_page_cover="false"
        app:canLoop="true"
        app:indicatorAlign="center"
+       app:indicatorbot="7dp"
        />
 
 </LinearLayout>

@@ -4,8 +4,7 @@
         <attr name="open_mz_mode" format="boolean"/>
         <attr name="canLoop" format="boolean"/>
         <attr name="resettime" format="boolean"/>
-        <attr name="indicatorPaddingLeft" format="dimension"/>
-        <attr name="indicatorPaddingRight" format="dimension"/>
+        <attr name="indicatorPadding" format="dimension"/>
         <attr name="indicatorbot" format="dimension"/>
         <attr name="indicatorAlign">
             <enum name="left" value="0"/>

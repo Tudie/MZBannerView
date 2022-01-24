@@ -24,7 +24,6 @@
         android:layout_marginTop="10dp"
         app:canLoop="false"
         app:indicatorAlign="left"
-        app:indicatorPaddingLeft="12dp"
         app:open_mz_mode="true" />
 
     <TextView
