@@ -42,7 +42,7 @@
        android:layout_width="match_parent"
        android:layout_height="150dp"
        android:layout_marginTop="10dp"
-       app:open_mz_mode="false"
+       app:open_mz_mode="true"
        app:middle_page_cover="false"
        app:canLoop="true"
        app:indicatorAlign="center"

@@ -4,11 +4,7 @@ import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
-/**
- * Created by zhouwei on 17/5/26.
- */
-
-public class ScaleYTransformer implements ViewPager.PageTransformer {
+public class ScaleYTTransformer implements ViewPager.PageTransformer {
     private static final float MIN_SCALE = 0.9F;
     @Override
     public void transformPage(View page, float position) {
@@ -19,6 +15,14 @@ public class ScaleYTransformer implements ViewPager.PageTransformer {
             //
             float scale = Math.max(MIN_SCALE,1 - Math.abs(position));
             page.setScaleY(scale);
+            /*page.setScaleX(scale);
+
+            if(position<0){
+                page.setTranslationX(width * (1 - scale) /2);
+            }else{
+                page.setTranslationX(-width * (1 - scale) /2);
+            }*/
+
         }else{
             page.setScaleY(MIN_SCALE);
         }

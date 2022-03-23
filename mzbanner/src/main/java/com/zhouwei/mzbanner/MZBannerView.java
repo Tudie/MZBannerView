@@ -34,6 +34,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 import com.zhouwei.mzbanner.holder.MZViewHolder;
 import com.zhouwei.mzbanner.transformer.CoverModeTransformer;
+import com.zhouwei.mzbanner.transformer.GallyPageTransformer;
 import com.zhouwei.mzbanner.transformer.ScaleYTransformer;
 
 import java.lang.reflect.Field;
@@ -162,14 +163,14 @@ public class MZBannerView<T> extends RelativeLayout {
         mIsCanLoops = mIsCanLoop;
         mIndicatorAlign = typedArray.getInt(R.styleable.MZBannerView_indicatorAlign, 1);
         indicatorPadding = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorPadding, 0);
-        Log.i(">>>>>>>>>>>>banner"," indicatorPadding "+indicatorPadding);
+//        Log.i(">>>>>>>>>>>>banner"," indicatorPadding "+indicatorPadding);
         mIndicatorbot = typedArray.getDimensionPixelSize(R.styleable.MZBannerView_indicatorbot, 0);
         init();
     }
 
 
     private void init() {
-        Log.i(">>>>>>>>>>>>banner init"," indicatorPadding "+mIndicatorbot);
+//        Log.i(">>>>>>>>>>>>banner init"," indicatorPadding "+mIndicatorbot);
         View view = null;
         if (mIsOpenMZEffect) {
             view = LayoutInflater.from(getContext()).inflate(R.layout.mz_banner_effect_layout, this, true);
@@ -209,16 +210,20 @@ public class MZBannerView<T> extends RelativeLayout {
      */
     private void setOpenMZEffect() {
         // 魅族模式
-        if (mIsOpenMZEffect) {
-            if (mIsMiddlePageCover) {
-                // 中间页面覆盖两边，和魅族APP 的banner 效果一样。
-                mViewPager.setPageTransformer(true, new CoverModeTransformer(mViewPager));
-            } else {
+
+//        if (mIsOpenMZEffect) {
+//            if (mIsMiddlePageCover) {
+//                // 中间页面覆盖两边，和魅族APP 的banner 效果一样。
+//                mViewPager.setPageTransformer(true, new CoverModeTransformer(mViewPager));
+//            } else {
                 // 中间页面不覆盖，页面并排，只是Y轴缩小
                 mViewPager.setPageTransformer(false, new ScaleYTransformer());
-            }
 
-        }
+//            }
+//
+//        }
+
+//        mViewPager.setPageTransformer(false, new GallyPageTransformer());
     }
 
     /**
@@ -496,6 +501,7 @@ public class MZBannerView<T> extends RelativeLayout {
                 MarginLayoutParams layoutParams = (MarginLayoutParams) mViewPager.getLayoutParams();
                 layoutParams.setMargins(0, 0, 0, 0);
                 mViewPager.setLayoutParams(layoutParams);
+                mViewPager.setPageMargin(130);
                 setClipChildren(true);
                 mViewPager.setClipChildren(true);
             }

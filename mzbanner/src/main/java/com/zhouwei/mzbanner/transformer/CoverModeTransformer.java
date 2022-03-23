@@ -31,7 +31,7 @@ public class CoverModeTransformer implements ViewPager.PageTransformer {
         }
         float currentPos = position - offsetPosition;
         if (itemWidth == 0) {
-            itemWidth = view.getWidth();
+            itemWidth = view.getWidth()*2/3;
             //由于左右边的缩小而减小的x的大小的一半
             reduceX = (2.0f - mScaleMax - mScaleMin) * itemWidth / 2.0f;
         }
